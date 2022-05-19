@@ -32,8 +32,8 @@ public class FirstTest {
 
 		driver.findElement(By.xpath("//*[@id=\"add\"]")).click();
 		driver.findElement(By.xpath("//*[@id=\"name\"]")).sendKeys("NewComputer");
-		driver.findElement(By.xpath("//*[@id=\"introduced\"]")).sendKeys("2015/04/20");
-		driver.findElement(By.xpath("//*[@id=\"discontinued\"]")).sendKeys("2020/04/30");
+		driver.findElement(By.xpath("//*[@id=\"introduced\"]")).sendKeys("2015-04-20");
+		driver.findElement(By.xpath("//*[@id=\"discontinued\"]")).sendKeys("2020-04-30");
 		Select dropDown = new Select(driver.findElement(By.xpath("//*[@id=\"company\"]")));
 		dropDown.selectByVisibleText("IBM");
 		driver.findElement(By.xpath("//*[@id=\"main\"]/form/div/input")).click();
@@ -61,5 +61,6 @@ public class FirstTest {
 			System.out.println("Different output detected!");
 		}
 		driver.close();
+		
 	}
 }
